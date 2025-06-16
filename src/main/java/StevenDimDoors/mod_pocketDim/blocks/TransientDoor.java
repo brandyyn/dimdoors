@@ -51,8 +51,8 @@ public class TransientDoor extends BaseDimDoor
                         DDTeleporter.traverseDimDoor(world, link, entity, this);
                         // Turn the door into a rift AFTER teleporting the player.
                         // The door's orientation may be necessary for the teleport.
-                        world.setBlock(x, y, z, mod_pocketDim.blockRift);
-                        world.setBlockToAir(x, y - 1, z);
+                        //world.setBlock(x, y, z, mod_pocketDim.blockRift);
+                        //world.setBlockToAir(x, y - 1, z);
                     }
 				}
 			}
