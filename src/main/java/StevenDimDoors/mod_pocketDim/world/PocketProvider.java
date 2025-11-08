@@ -45,20 +45,6 @@ public class PocketProvider extends WorldProvider
 	}
 
 	@Override
-	public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
-	{
-		setCloudRenderer( new CloudRenderBlank());
-		return Vec3.createVectorHelper(0d, 0d, 0d);
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public Vec3 getFogColor(float par1, float par2)
-	{
-		return Vec3.createVectorHelper(0d, 0d, 0d);
-	}
-
-	@Override
 	public double getHorizon()
 	{
 		return worldObj.getHeight();

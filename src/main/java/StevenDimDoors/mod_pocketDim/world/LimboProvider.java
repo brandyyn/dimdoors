@@ -35,7 +35,7 @@ public class LimboProvider extends WorldProvider
 
 	public LimboProvider()
 	{
-		this.hasNoSky = false;
+		this.hasNoSky = true;
 		this.skyRenderer = new LimboSkyProvider();
 		this.spawner = mod_pocketDim.spawner;
 		this.properties = mod_pocketDim.properties;
@@ -145,19 +145,18 @@ public class LimboProvider extends WorldProvider
 	{
 		return worldObj.getHeight()/4-800;
 	}
+
 	@Override
 	public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
 	{
 		setCloudRenderer( new CloudRenderBlank());
-		return Vec3.createVectorHelper(0, 0, 0);
-
+		return Vec3.createVectorHelper(0d, 0d, 0d);
 	}
 	@SideOnly(Side.CLIENT)
 	@Override
 	public Vec3 getFogColor(float par1, float par2)
 	{
-		return Vec3.createVectorHelper(.2, .2, .2);
-
+		return Vec3.createVectorHelper(0.07d, 0.07d, 0.07d);
 	}
 	@Override
 	public int getRespawnDimension(EntityPlayerMP player)
